@@ -119,7 +119,7 @@ class quickmultiattributeedit_update_selected_dialog(QDialog, Ui_quickmultiattri
 	  if (nF > 0):		
 	   oFeaIterator = layer.selectedFeatures() # give the selected feauter new in api2
 	   for feature in oFeaIterator: # in oFea2 there is an iterator object (api2)
-	    	   layer.changeAttributeValue(feature.id(),nPosField,value,True) 
+	    	   layer.changeAttributeValue(feature.id(),nPosField,value) 
 	   infoString = unicode("<font color='green'> <b>You can save or abort changes at the end of sessions.<br>Press the Save icon to save or disable the edit mode of layer without save changes to abort...</b></font>")
            if not os.path.exists( tempfile.gettempdir() + "/QuickMultiAttributeEdit_tmp"):
               out_file = open(tempfile.gettempdir() + '/QuickMultiAttributeEdit_tmp', 'w')
